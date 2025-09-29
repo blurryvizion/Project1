@@ -1,0 +1,250 @@
+/* Page background and reset */
+html, body {
+	background: #CBB79E; /* outer canvas */
+	margin: 0;
+}
+
+/* Heading and paragraph spacing reset */
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+/* Heading color */
+h1, h2, h3, h4, h5, h6 {
+	color: rgb(107, 92, 72);
+}
+
+/* Body layout and type */
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 100%;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2.5% 2.5% 0;
+	background: #FFFFFF; /* page canvas */
+	line-height: 1.8;
+	color: #2B2119;
+}
+
+/* Heading scales */
+h1 {
+	font: 1.6em Verdana, Geneva, sans-serif;
+	margin-bottom: .4em;
+	color: rgb(138, 104, 83);
+}
+h2 {
+	font: 3.2em Georgia, "Times New Roman", Times, serif;
+	margin-bottom: .2em;
+}
+h3 {
+	font-size: 1.2em;
+}
+
+/* Paragraph spacing */
+p { margin-bottom: 1em; }
+
+/* Links */
+a { color: rgb(184, 126, 84); }
+a:hover { color: rgb(120, 97, 55); }
+
+/* Preformatted blocks */
+pre {
+	font-size: 1.4em;
+	color: white;
+	padding: .5em 1em;
+	border-left: 1em solid #A68048;
+	background: #666;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	width: 80%;
+}
+pre.wrong { border-left-color: red; }
+pre.correct { border-left-color: green; }
+
+/* Definition lists */
+dt { font-style: italic; font-size: 1.2em; }
+dd { margin-bottom: 1.4em; }
+
+/* Tables */
+table { margin-top: 1em; }
+caption {
+	margin: 0 0 1em 0;
+	padding: 0;
+	text-align: left;
+}
+td, th { padding: 10px; }
+
+/* Utilities */
+.center { text-align: center; }
+blockquote { font-style: italic; }
+.flowRight { float: right; margin-left: 10px; }
+.flowLeft { float: left; margin-right: 10px; }
+
+/* Header accent */
+header h2 {
+	padding-bottom: .2em;
+	border-bottom: 1px solid gray;
+}
+
+/* Sidebar */
+aside {
+	padding: 1em;
+	background: #8B5E34;
+	color: white;
+	margin-bottom: 1em;
+}
+aside h4 { color: white; }
+
+/* Footer */
+footer {
+	border-top: 1px solid gray;
+	text-align: center;
+	font-size: .8em;
+	line-height: 4em;
+	margin-top: 1em;
+	color: #5A4638;
+}
+
+/* Site header and nav */
+.site-header { margin-bottom: 1em; }
+.site-nav a {
+	margin-right: .75em;
+	text-decoration: none;
+}
+.site-nav a[aria-current="page"] {
+	border-bottom: 2px solid rgb(184, 126, 84);
+}
+
+/* Main container */
+#content { margin-bottom: 2em; }
+
+/* Cards for posts and pages */
+.post, .shop-card, .post-full, .about {
+	border: 1px solid #D8CBB7;
+	background: #EFE6D9;
+	padding: 1em;
+	margin-bottom: 1em;
+	border-radius: 8px;
+}
+
+/* Thumbnails and hero images */
+.thumbnail {
+	width: 100%;
+	height: auto;
+	margin-bottom: .75em;
+	border-radius: 6px;
+}
+.hero {
+	width: 100%;
+	height: auto;
+	margin: .5em 0 1em;
+	border-radius: 6px;
+}
+
+/* List layout for index and archive */
+.list-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1em;
+}
+@media (min-width: 720px) {
+	.list-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Rating row with meter */
+.rating {
+	display: grid;
+	grid-template-columns: 9rem 1fr;
+	align-items: center;
+	column-gap: .5rem;
+	margin-top: .6rem;
+}
+.rating label {
+	font-weight: bold;
+	color: #5A4638;
+}
+meter {
+	width: 100%;
+	height: 1rem;
+}
+
+/* Pager for archive */
+.pager {
+	text-align: center;
+	margin-top: 1em;
+}
+.pager a {
+	display: inline-block;
+	padding: .4rem .75rem;
+	border: 1px solid #D8CBB7;
+	background: #EFE6D9;
+	border-radius: 999px;
+	margin: 0 .25rem;
+}
+
+/* Map iframe on single post */
+.post-full .map iframe {
+	width: 100%;
+	min-height: 300px;
+	border: 1px solid #D8CBB7;
+	border-radius: 6px;
+	background: #E7DCCB;
+}
+
+/* Consistent image alignment */
+img {
+	display: block;
+	margin: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Uniform thumbnail crop */
+.thumbnail {
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* Uniform hero image */
+.hero {
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* Centered image utility */
+.img-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Figure and caption alignment */
+figure { margin: 0 0 1em 0; }
+figure img { display: block; margin: 0 auto; }
+figcaption {
+	text-align: center;
+	font-size: .9em;
+	color: #5A4638;
+	margin-top: .5em;
+}
+
+/* Evenly aligned image rows */
+.image-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1em;
+	align-items: stretch;
+}
+.image-row img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: 6px;
+}
